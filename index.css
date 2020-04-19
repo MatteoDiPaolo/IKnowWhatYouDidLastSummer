@@ -2,23 +2,23 @@
     color: #17ae8e;
 }
 
-.mr-red-text{
+.mr-red-text {
     color: #e6194B;
 }
 
-.mr-blonde-text{
+.mr-blonde-text {
     color: #ffe119;
 }
 
-.mr-green-text{
+.mr-green-text {
     color: #3cb44b;
 }
 
-.mr-blue-text{
+.mr-blue-text {
     color: #4363d8;
 }
 
-.mr-pink-text{
+.mr-pink-text {
     color: #e6beff;
 }
 
@@ -28,4 +28,8 @@ li {
 
 li span {
     color: white;
+}
+
+img {
+    border: 3px solid #17ae8e !important;
 }
