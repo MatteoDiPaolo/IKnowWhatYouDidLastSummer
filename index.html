@@ -138,9 +138,9 @@
 
 			<section>
 				<section>
-					<h2>Google Takeout</h2>
+					<h2>Google Takeout Data</h2>
 					<p>
-						An
+						<span class="gs-text">Google Takeout</span> is an
 						<a href="https://takeout.google.com/settings/takeout">online portal</a>
 						that allows users to export and download data from
 						Google products, like Gmail, Drive and Maps.
@@ -170,6 +170,121 @@
 							<img data-src="/images/5.png" alt="...">
 						</div>
 					</div>
+				</section>
+				<section>
+					<h2>Google Locations JSON</h2>
+					<pre><code class="hljs json" style="word-wrap: break-word;">
+{ "locations": [{
+  "timestampMs": "1507330772000",
+  "latitudeE7": 419058658,
+  "longitudeE7": 125218684,
+  "accuracy": 16,
+  "velocity": 0,
+  "altitude": 66,
+  "activity": [
+    {
+      "timestampMs": "1507049587082",
+      "activity": [{ "type": "TILTING", "confidence": 100 }]
+    },
+    {
+      "timestampMs": "1507049736368",
+      "activity": [
+        { "type": "IN_VEHICLE", "confidence": 33 },
+        { "type": "STILL", "confidence": 33 },
+        { "type": "UNKNOWN", "confidence": 17 },
+        { "type": "ON_FOOT",  "confidence": 12 },
+        { "type": "WALKING",  "confidence": 12 },
+        { "type": "ON_BICYCLE", "confidence": 6 }
+      ]
+    }
+  ]
+}]}
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Google Location Frequency</h2>
+					<span style="font-size: 20px;">
+						<blockquote cite="https://econsultsolutions.com/google-takeout-data/">
+							&ldquo;
+							The JSON export that I downloaded contains <b>1,123,198</b> observations over
+							the course of <b>2,215</b> days (about 6 years).
+							On average, that means that there are more than 21 measurements every hour,
+							or <b class="gs-text">1 measurement every 3 minutes</b>.
+							&rdquo;
+						</blockquote>
+					</span>
+					<img width="800" height="400" data-src="/images/6.png" alt="...">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Data</h2>
+					<p>Reservoir Dogs Google Location History Files</p>
+					<table>
+						<thead>
+							<tr>
+								<th>Dogs</th>
+								<th style="text-align: right;">File</th>
+								<th style="text-align: right;">Size</th>
+								<th style="text-align: right;">Locations</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="mr-red-text">Mr Red</span></td>
+								<td>1.json</td>
+								<td style="text-align: right;">126 Mb</td>
+								<td style="text-align: right;">289922</td>
+							</tr>
+							<tr>
+								<td><span class="mr-blonde-text">Mr Blonde</span></td>
+								<td>2.json</td>
+								<td style="text-align: right;">1167 Mb</td>
+								<td style="text-align: right;">3688763</td>
+							</tr>
+							<tr>
+								<td><span class="mr-green-text">Mr Green</span></td>
+								<td>3.json</td>
+								<td style="text-align: right;">200 Mb</td>
+								<td style="text-align: right;">326054</td>
+							</tr>
+							<tr>
+								<td><span class="mr-blue-text">Mr Blue</span></td>
+								<td>4.json</td>
+								<td style="text-align: right;">299 Mb</td>
+								<td style="text-align: right;">797952</td>
+							</tr>
+							<tr>
+								<td><span class="mr-pink-text">Mr Pink</span></td>
+								<td>5.json</td>
+								<td style="text-align: right;">292 Mb</td>
+								<td style="text-align: right;">645331</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Data processing</h2>
+					<p>Google Locations JSON &#8594; <a href="https://geojson.org/">GEOJSON</a></p>
+					<pre><code class="hljs json" style="word-wrap: break-word;">
+{ "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [ 12.5218684, 41.9058658 ]
+    },
+    "properties": {
+      "timestamp": "2017-10-06T22:59:32.000Z",
+      "accuracy": 16,
+      "velocity": null,
+      "altitude": 66
+    }
+}]}
+						</code></pre>
 				</section>
 			</section>
 
