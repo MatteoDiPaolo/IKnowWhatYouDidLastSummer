@@ -33,3 +33,11 @@ li span {
 img {
     border: 3px solid #17ae8e !important;
 }
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
