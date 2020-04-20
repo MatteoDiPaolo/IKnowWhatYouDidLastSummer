@@ -41,3 +41,8 @@ img {
 .column {
     flex: 50%;
 }
+
+.bounce-down {
+    -webkit-animation: bounce-down 2s 50 both ease-out;
+    animation: bounce-down 2s 50 both ease-out;
+}
